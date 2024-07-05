@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me perdonas😔?</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #000000, #0000ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            transition: font-size 0.2s ease;
+        }
+        #btnSi {
+            background-color: #ff69b4; /* Hot Pink */
+            color: white;
+        }
+        #btnNo {
+            background-color: #800080; /* Purple */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Me perdonas?</h1>
+    <div class="buttons">
+        <button id="btnSi" class="btn">Sí</button>
+        <button id="btnNo" class="btn">No</button>
+    </div>
+
+    <script>
+        const btnNo = document.getElementById('btnNo');
+        const btnSi = document.getElementById('btnSi');
+        let fontSize = 1;
+
+        btnNo.addEventListener('click', () => {
+            fontSize += 0.2;
+            btnSi.style.fontSize = fontSize + 'em';
+        });
+
+        btnSi.addEventListener('click', () => {
+            alert('¡Gracias🥺!');
+        });
+    </script>
+</body>
+</html>
